@@ -44,12 +44,13 @@ Partial Class MainForm
         Me.aceFinance = New DevExpress.XtraBars.Navigation.AccordionControlElement()
         Me.AceMemberContributions = New DevExpress.XtraBars.Navigation.AccordionControlElement()
         Me.AceDividentPayments = New DevExpress.XtraBars.Navigation.AccordionControlElement()
+        Me.AceImportExpenses = New DevExpress.XtraBars.Navigation.AccordionControlElement()
         Me.aceReports = New DevExpress.XtraBars.Navigation.AccordionControlElement()
         Me.FluentDesignFormControl1 = New DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormControl()
         Me.TopBarItem = New DevExpress.XtraBars.BarStaticItem()
         Me.FluentFormDefaultManager1 = New DevExpress.XtraBars.FluentDesignSystem.FluentFormDefaultManager(Me.components)
         Me.AccordionControlElement1 = New DevExpress.XtraBars.Navigation.AccordionControlElement()
-        Me.AceImportExpenses = New DevExpress.XtraBars.Navigation.AccordionControlElement()
+        Me.AceReleaseUnit = New DevExpress.XtraBars.Navigation.AccordionControlElement()
         CType(Me.AccordionControl1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.FluentDesignFormControl1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.FluentFormDefaultManager1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -205,7 +206,8 @@ Partial Class MainForm
         '
         'aceProjects
         '
-        Me.aceProjects.Elements.AddRange(New DevExpress.XtraBars.Navigation.AccordionControlElement() {Me.AceMembers, Me.AceAssignMemberNo, Me.AccordionControlSeparator3, Me.AceProjectsForm})
+        Me.aceProjects.Elements.AddRange(New DevExpress.XtraBars.Navigation.AccordionControlElement() {Me.AceMembers, Me.AceAssignMemberNo, Me.AccordionControlSeparator3, Me.AceProjectsForm, Me.AceReleaseUnit})
+        Me.aceProjects.Expanded = True
         Me.aceProjects.Name = "aceProjects"
         Me.aceProjects.Text = "Projects"
         '
@@ -261,7 +263,6 @@ Partial Class MainForm
         'aceFinance
         '
         Me.aceFinance.Elements.AddRange(New DevExpress.XtraBars.Navigation.AccordionControlElement() {Me.AceMemberContributions, Me.AceDividentPayments, Me.AceImportExpenses})
-        Me.aceFinance.Expanded = True
         Me.aceFinance.Name = "aceFinance"
         Me.aceFinance.Text = "Finance"
         '
@@ -294,6 +295,13 @@ Partial Class MainForm
         Me.AceDividentPayments.Name = "AceDividentPayments"
         Me.AceDividentPayments.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item
         Me.AceDividentPayments.Text = "Dividends Payments"
+        '
+        'AceImportExpenses
+        '
+        Me.AceImportExpenses.ImageOptions.Image = Global.phcsl.My.Resources.Resources.icons8_import_16
+        Me.AceImportExpenses.Name = "AceImportExpenses"
+        Me.AceImportExpenses.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item
+        Me.AceImportExpenses.Text = "Import Expenses"
         '
         'aceReports
         '
@@ -333,12 +341,12 @@ Partial Class MainForm
         Me.AccordionControlElement1.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item
         Me.AccordionControlElement1.Text = "Element1"
         '
-        'AceImportExpenses
+        'AceReleaseUnit
         '
-        Me.AceImportExpenses.ImageOptions.Image = Global.phcsl.My.Resources.Resources.icons8_import_16
-        Me.AceImportExpenses.Name = "AceImportExpenses"
-        Me.AceImportExpenses.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item
-        Me.AceImportExpenses.Text = "Import Expenses"
+        Me.AceReleaseUnit.ImageOptions.Image = Global.phcsl.My.Resources.Resources.icons8_reset_16
+        Me.AceReleaseUnit.Name = "AceReleaseUnit"
+        Me.AceReleaseUnit.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item
+        Me.AceReleaseUnit.Text = "Release Unit - Member"
         '
         'MainForm
         '
@@ -388,4 +396,5 @@ Partial Class MainForm
     Friend WithEvents aceGeneralMessage As DevExpress.XtraBars.Navigation.AccordionControlElement
     Friend WithEvents AceDividentPayments As DevExpress.XtraBars.Navigation.AccordionControlElement
     Friend WithEvents AceImportExpenses As DevExpress.XtraBars.Navigation.AccordionControlElement
+    Friend WithEvents AceReleaseUnit As DevExpress.XtraBars.Navigation.AccordionControlElement
 End Class

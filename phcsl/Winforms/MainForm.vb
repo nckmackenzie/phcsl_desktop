@@ -173,4 +173,14 @@ Public Class MainForm
         UCImportExpenses.Instance.BringToFront()
         TopBarItem.Caption = AceImportExpenses.Text.ToString
     End Sub
+
+    Private Sub AceReleaseUnit_Click(sender As Object, e As EventArgs) Handles AceReleaseUnit.Click
+        If Not AppContainer.Controls.Contains(UCReleaseUnit.Instance) Then
+            AppContainer.Controls.Add(UCReleaseUnit.Instance)
+            UCReleaseUnit.Instance.Dock = DockStyle.Fill
+            UCReleaseUnit.Instance.BringToFront()
+        End If
+        UCReleaseUnit.Instance.BringToFront()
+        TopBarItem.Caption = AceReleaseUnit.Text.ToString
+    End Sub
 End Class
