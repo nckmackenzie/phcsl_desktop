@@ -163,4 +163,14 @@ Public Class MainForm
         UCDividendsPayments.Instance.BringToFront()
         TopBarItem.Caption = AceDividentPayments.Text.ToString
     End Sub
+
+    Private Sub AceImportExpenses_Click(sender As Object, e As EventArgs) Handles AceImportExpenses.Click
+        If Not AppContainer.Controls.Contains(UCImportExpenses.Instance) Then
+            AppContainer.Controls.Add(UCImportExpenses.Instance)
+            UCImportExpenses.Instance.Dock = DockStyle.Fill
+            UCImportExpenses.Instance.BringToFront()
+        End If
+        UCImportExpenses.Instance.BringToFront()
+        TopBarItem.Caption = AceImportExpenses.Text.ToString
+    End Sub
 End Class

@@ -43,12 +43,13 @@ Partial Class MainForm
         Me.AceProjectsForm = New DevExpress.XtraBars.Navigation.AccordionControlElement()
         Me.aceFinance = New DevExpress.XtraBars.Navigation.AccordionControlElement()
         Me.AceMemberContributions = New DevExpress.XtraBars.Navigation.AccordionControlElement()
+        Me.AceDividentPayments = New DevExpress.XtraBars.Navigation.AccordionControlElement()
         Me.aceReports = New DevExpress.XtraBars.Navigation.AccordionControlElement()
         Me.FluentDesignFormControl1 = New DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormControl()
         Me.TopBarItem = New DevExpress.XtraBars.BarStaticItem()
         Me.FluentFormDefaultManager1 = New DevExpress.XtraBars.FluentDesignSystem.FluentFormDefaultManager(Me.components)
         Me.AccordionControlElement1 = New DevExpress.XtraBars.Navigation.AccordionControlElement()
-        Me.AceDividentPayments = New DevExpress.XtraBars.Navigation.AccordionControlElement()
+        Me.AceImportExpenses = New DevExpress.XtraBars.Navigation.AccordionControlElement()
         CType(Me.AccordionControl1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.FluentDesignFormControl1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.FluentFormDefaultManager1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -65,6 +66,14 @@ Partial Class MainForm
         '
         'AccordionControl1
         '
+        Me.AccordionControl1.Appearance.Item.Disabled.Font = New System.Drawing.Font("Trebuchet MS", 7.8!, System.Drawing.FontStyle.Bold)
+        Me.AccordionControl1.Appearance.Item.Disabled.Options.UseFont = True
+        Me.AccordionControl1.Appearance.Item.Hovered.Font = New System.Drawing.Font("Trebuchet MS", 7.8!, System.Drawing.FontStyle.Bold)
+        Me.AccordionControl1.Appearance.Item.Hovered.Options.UseFont = True
+        Me.AccordionControl1.Appearance.Item.Normal.Font = New System.Drawing.Font("Trebuchet MS", 7.8!, System.Drawing.FontStyle.Bold)
+        Me.AccordionControl1.Appearance.Item.Normal.Options.UseFont = True
+        Me.AccordionControl1.Appearance.Item.Pressed.Font = New System.Drawing.Font("Trebuchet MS", 7.8!, System.Drawing.FontStyle.Bold)
+        Me.AccordionControl1.Appearance.Item.Pressed.Options.UseFont = True
         Me.AccordionControl1.Dock = System.Windows.Forms.DockStyle.Left
         Me.AccordionControl1.Elements.AddRange(New DevExpress.XtraBars.Navigation.AccordionControlElement() {Me.aceHome, Me.aceProjects, Me.aceFinance, Me.aceReports})
         Me.AccordionControl1.Location = New System.Drawing.Point(0, 46)
@@ -251,7 +260,7 @@ Partial Class MainForm
         '
         'aceFinance
         '
-        Me.aceFinance.Elements.AddRange(New DevExpress.XtraBars.Navigation.AccordionControlElement() {Me.AceMemberContributions, Me.AceDividentPayments})
+        Me.aceFinance.Elements.AddRange(New DevExpress.XtraBars.Navigation.AccordionControlElement() {Me.AceMemberContributions, Me.AceDividentPayments, Me.AceImportExpenses})
         Me.aceFinance.Expanded = True
         Me.aceFinance.Name = "aceFinance"
         Me.aceFinance.Text = "Finance"
@@ -270,6 +279,21 @@ Partial Class MainForm
         Me.AceMemberContributions.Name = "AceMemberContributions"
         Me.AceMemberContributions.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item
         Me.AceMemberContributions.Text = "Member Contributions"
+        '
+        'AceDividentPayments
+        '
+        Me.AceDividentPayments.Appearance.Disabled.Font = New System.Drawing.Font("Trebuchet MS", 7.8!, System.Drawing.FontStyle.Bold)
+        Me.AceDividentPayments.Appearance.Disabled.Options.UseFont = True
+        Me.AceDividentPayments.Appearance.Hovered.Font = New System.Drawing.Font("Trebuchet MS", 7.8!, System.Drawing.FontStyle.Bold)
+        Me.AceDividentPayments.Appearance.Hovered.Options.UseFont = True
+        Me.AceDividentPayments.Appearance.Normal.Font = New System.Drawing.Font("Trebuchet MS", 7.8!, System.Drawing.FontStyle.Bold)
+        Me.AceDividentPayments.Appearance.Normal.Options.UseFont = True
+        Me.AceDividentPayments.Appearance.Pressed.Font = New System.Drawing.Font("Trebuchet MS", 7.8!, System.Drawing.FontStyle.Bold)
+        Me.AceDividentPayments.Appearance.Pressed.Options.UseFont = True
+        Me.AceDividentPayments.ImageOptions.Image = Global.phcsl.My.Resources.Resources.icons8_money_16
+        Me.AceDividentPayments.Name = "AceDividentPayments"
+        Me.AceDividentPayments.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item
+        Me.AceDividentPayments.Text = "Dividends Payments"
         '
         'aceReports
         '
@@ -309,20 +333,12 @@ Partial Class MainForm
         Me.AccordionControlElement1.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item
         Me.AccordionControlElement1.Text = "Element1"
         '
-        'AceDividentPayments
+        'AceImportExpenses
         '
-        Me.AceDividentPayments.Appearance.Disabled.Font = New System.Drawing.Font("Trebuchet MS", 7.8!, System.Drawing.FontStyle.Bold)
-        Me.AceDividentPayments.Appearance.Disabled.Options.UseFont = True
-        Me.AceDividentPayments.Appearance.Hovered.Font = New System.Drawing.Font("Trebuchet MS", 7.8!, System.Drawing.FontStyle.Bold)
-        Me.AceDividentPayments.Appearance.Hovered.Options.UseFont = True
-        Me.AceDividentPayments.Appearance.Normal.Font = New System.Drawing.Font("Trebuchet MS", 7.8!, System.Drawing.FontStyle.Bold)
-        Me.AceDividentPayments.Appearance.Normal.Options.UseFont = True
-        Me.AceDividentPayments.Appearance.Pressed.Font = New System.Drawing.Font("Trebuchet MS", 7.8!, System.Drawing.FontStyle.Bold)
-        Me.AceDividentPayments.Appearance.Pressed.Options.UseFont = True
-        Me.AceDividentPayments.ImageOptions.Image = Global.phcsl.My.Resources.Resources.icons8_money_16
-        Me.AceDividentPayments.Name = "AceDividentPayments"
-        Me.AceDividentPayments.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item
-        Me.AceDividentPayments.Text = "Dividends Payments"
+        Me.AceImportExpenses.ImageOptions.Image = Global.phcsl.My.Resources.Resources.icons8_import_16
+        Me.AceImportExpenses.Name = "AceImportExpenses"
+        Me.AceImportExpenses.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item
+        Me.AceImportExpenses.Text = "Import Expenses"
         '
         'MainForm
         '
@@ -371,4 +387,5 @@ Partial Class MainForm
     Friend WithEvents AceProjectsForm As DevExpress.XtraBars.Navigation.AccordionControlElement
     Friend WithEvents aceGeneralMessage As DevExpress.XtraBars.Navigation.AccordionControlElement
     Friend WithEvents AceDividentPayments As DevExpress.XtraBars.Navigation.AccordionControlElement
+    Friend WithEvents AceImportExpenses As DevExpress.XtraBars.Navigation.AccordionControlElement
 End Class
