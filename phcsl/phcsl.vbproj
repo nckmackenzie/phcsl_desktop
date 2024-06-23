@@ -70,6 +70,12 @@
     <Reference Include="DevExpress.XtraGrid.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraLayout.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraTreeList.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="ExcelDataReader, Version=3.7.0.0, Culture=neutral, PublicKeyToken=93517dbe6a4012fa, processorArchitecture=MSIL">
+      <HintPath>..\packages\ExcelDataReader.3.7.0\lib\net462\ExcelDataReader.dll</HintPath>
+    </Reference>
+    <Reference Include="ExcelDataReader.DataSet, Version=3.7.0.0, Culture=neutral, PublicKeyToken=93517dbe6a4012fa, processorArchitecture=MSIL">
+      <HintPath>..\packages\ExcelDataReader.DataSet.3.7.0\lib\net462\ExcelDataReader.DataSet.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="Microsoft.ReportViewer.Common, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.ReportViewer.Runtime.Common.12.0.2402.15\lib\Microsoft.ReportViewer.Common.dll</HintPath>
@@ -221,6 +227,12 @@
     <Compile Include="User Controls\UCGeneralMessage.vb">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="User Controls\UCImportExpenses.Designer.vb">
+      <DependentUpon>UCImportExpenses.vb</DependentUpon>
+    </Compile>
+    <Compile Include="User Controls\UCImportExpenses.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="User Controls\UCMemberCollections.Designer.vb">
       <DependentUpon>UCMemberCollections.vb</DependentUpon>
     </Compile>
@@ -301,6 +313,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="User Controls\UCGeneralMessage.resx">
       <DependentUpon>UCGeneralMessage.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Controls\UCImportExpenses.resx">
+      <DependentUpon>UCImportExpenses.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="User Controls\UCMemberCollections.resx">
       <DependentUpon>UCMemberCollections.vb</DependentUpon>
@@ -390,6 +405,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="icons8-property-16.ico" />
+    <None Include="Resources\icons8-import-16.png" />
     <None Include="Resources\icons8-money-16.png" />
     <None Include="Resources\icons8-message-16.png" />
     <None Include="Resources\icons8-land-16.png" />
