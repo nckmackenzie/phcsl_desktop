@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DSApp" targetNamespace="http://tempuri.org/DSApp.xsd" xmlns:mstns="http://tempuri.org/DSApp.xsd" xmlns="http://tempuri.org/DSApp.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DSApp" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DSApp" msprop:Generator_UserDSName="DSApp">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="unitsale" msprop:Generator_TableClassName="unitsaleDataTable" msprop:Generator_TableVarName="tableunitsale" msprop:Generator_TablePropName="unitsale" msprop:Generator_RowDeletingName="unitsaleRowDeleting" msprop:Generator_RowChangingName="unitsaleRowChanging" msprop:Generator_RowEvHandlerName="unitsaleRowChangeEventHandler" msprop:Generator_RowDeletedName="unitsaleRowDeleted" msprop:Generator_UserTableName="unitsale" msprop:Generator_RowChangedName="unitsaleRowChanged" msprop:Generator_RowEvArgName="unitsaleRowChangeEvent" msprop:Generator_RowClassName="unitsaleRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="particulars" msprop:Generator_ColumnVarNameInTable="columnparticulars" msprop:Generator_ColumnPropNameInRow="particulars" msprop:Generator_ColumnPropNameInTable="particularsColumn" msprop:Generator_UserColumnName="particulars" type="xs:string" minOccurs="0" />
+              <xs:element name="amount" msprop:Generator_ColumnVarNameInTable="columnamount" msprop:Generator_ColumnPropNameInRow="amount" msprop:Generator_ColumnPropNameInTable="amountColumn" msprop:Generator_UserColumnName="amount" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
