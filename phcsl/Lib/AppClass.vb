@@ -4,6 +4,7 @@ Imports DevExpress.XtraLayout
 Imports System.Data.SqlClient
 Imports System.Security.Cryptography
 Imports System.Text
+Imports System.Globalization
 Public Class AppClass
     Public Shared Sub UserLogin(userid As String, password As String, txtbx As DevExpress.XtraEditors.TextEdit)
         LogedUserID = Nothing
@@ -548,5 +549,15 @@ Public Class AppClass
             ShowError(ex.Message)
         End Try
     End Sub
+    Public Shared Function IsValidDate(dateString As String) As Boolean
+        Dim formats As String() = {"dd/MM/yyyy", "dd-MM-yyyy"}
+        Dim dateValue As DateTime
+
+        If DateTime.TryParseExact(dateString, formats, CultureInfo.InvariantCulture, DateTimeStyles.None, dateValue) Then
+            Return True
+        Else
+            Return False
+        End If
+    End Function
 
 End Class
