@@ -1332,7 +1332,7 @@
                 <Width>2.68167in</Width>
                 <ZIndex>3</ZIndex>
                 <Visibility>
-                  <Hidden>=IIF(Parameters!prmShowStamp.Value=False,True,False)</Hidden>
+                  <Hidden>true</Hidden>
                 </Visibility>
                 <Style>
                   <Border>
