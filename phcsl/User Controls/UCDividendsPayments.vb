@@ -135,6 +135,38 @@ Public Class UCDividendsPayments
                         .ExecuteNonQuery()
                     End With
                 End Using
+
+                If PloughOptionsComboBoxEdit.EditValue = 4 Then
+                    AddParams("@id", UnitLookUpEdit.EditValue)
+                    Dim paidAmount As Decimal = CDec(AppClass.FetchDBValue("SELECT ISNULL(unitPaid,0) AS paidAmount FROM tblUnits WHERE ID=@id"))
+                    Dim totalPaidAmount As Decimal = CDec(AmountTextEdit.EditValue) + paidAmount
+
+                    sql = "UPDATE tblUnits SET unitPaid=@newamount WHERE ID=@id"
+                    Using cmd = New SqlCommand(sql, connection, myTransaction)
+                        With cmd
+                            .Parameters.Add(New SqlParameter("@newamount", SqlDbType.Decimal)).Value = totalPaidAmount
+                            .Parameters.Add(New SqlParameter("@id", SqlDbType.Int)).Value = UnitLookUpEdit.EditValue
+                            .ExecuteNonQuery()
+                        End With
+                    End Using
+
+                    sql = "INSERT INTO tblUnitPayment (unitId,openingBal,paymentDate,amountPaid,closingBal,transactionType,transactionID) VALUES(@uid,@obal,@date,@paid,@cbal,@type,@tid)"
+                    Using cmd = New SqlCommand(sql, connection, myTransaction)
+                        With cmd
+                            .Parameters.Clear()
+                            .Parameters.Add("@uid", SqlDbType.Int).Value = UnitLookUpEdit.EditValue
+                            .Parameters.Add("@obal", SqlDbType.Decimal).Value = CDec(BalanceTextEdit.EditValue)
+                            .Parameters.Add("@date", SqlDbType.Date).Value = CDate(PaymentDateEdit.EditValue).Date
+                            .Parameters.Add("@paid", SqlDbType.Decimal).Value = CDec(AmountTextEdit.EditValue)
+                            Dim bal As Decimal = CDec(BalanceTextEdit.EditValue) - CDec(AmountTextEdit.EditValue)
+                            .Parameters.Add("@cbal", SqlDbType.Decimal).Value = bal
+                            .Parameters.Add("@type", SqlDbType.Int).Value = 13
+                            .Parameters.Add("@tid", SqlDbType.Int).Value = ID
+                            .ExecuteNonQuery()
+                        End With
+                    End Using
+                End If
+
                 sql = "INSERT INTO tblLogs VALUES(@uid,@act,@actdate)"
                 Using cmd = New SqlCommand(sql, connection, myTransaction)
                     With cmd

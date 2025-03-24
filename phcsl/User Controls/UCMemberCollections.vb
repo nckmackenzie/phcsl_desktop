@@ -479,7 +479,7 @@ Public Class UCMemberCollections
         ProjectLayoutControlItem.Enabled = False
         TransactionDateEdit.Properties.ReadOnly = True
         UnitLayoutControlItem.Enabled = False
-        PurposeLookUpEdit.Properties.ReadOnly = True
+        PurposeLookUpEdit.Properties.ReadOnly = False
         DeleteSimpleButton.Enabled = True
         AddParams("@id", ID)
         ReasonTextEdit.EditValue = CStr(AppClass.FetchDBValue("SELECT COALESCE(UPPER(editReason),'[None]') FROM tblIncomeHeader WHERE (ID=@id)"))
@@ -511,11 +511,19 @@ Public Class UCMemberCollections
             End With
             Using MyTransaction As SqlTransaction = connection.BeginTransaction
                 Try
-                    sql = "UPDATE tblIncomeDetails SET receiptDate=@date,amount=@amount,paymentMethodId=@pay,bankId=@bid "
+                    sql = "UPDATE tblIncomeDetails SET receiptDate=@date,purposeId=@pid,projectId=@project,unitId=@unit,amount=@amount,paymentMethodId=@pay,bankId=@bid "
                     sql &= "WHERE (ID=@id)"
                     Using cmd = New SqlCommand(sql, connection, MyTransaction)
                         With cmd
                             .Parameters.Add(New SqlParameter("@date", SqlDbType.Date)).Value = CDate(TransactionDateEdit.EditValue).Date
+                            .Parameters.Add(New SqlParameter("@pid", SqlDbType.Int)).Value = PurposeLookUpEdit.EditValue
+                            If PurposeLookUpEdit.EditValue = 4 Then
+                                .Parameters.Add(New SqlParameter("@project", SqlDbType.Int)).Value = ProjectLookUpEdit.EditValue
+                                .Parameters.Add(New SqlParameter("@unit", SqlDbType.Int)).Value = UnitLookUpEdit.EditValue
+                            Else
+                                .Parameters.Add(New SqlParameter("@project", SqlDbType.Int)).Value = DBNull.Value
+                                .Parameters.Add(New SqlParameter("@unit", SqlDbType.Int)).Value = DBNull.Value
+                            End If
                             .Parameters.Add(New SqlParameter("@amount", SqlDbType.Decimal)).Value = CDec(AmountTextEdit.EditValue)
                             .Parameters.Add(New SqlParameter("@pay", SqlDbType.Int)).Value = PayMethodLookUpEdit.EditValue
                             .Parameters.Add(New SqlParameter("@bid", SqlDbType.Int)).Value = IIf(BankLookUpEdit.EditValue Is Nothing, DBNull.Value, BankLookUpEdit.EditValue)
