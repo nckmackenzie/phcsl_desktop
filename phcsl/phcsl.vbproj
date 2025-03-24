@@ -58,18 +58,39 @@
     <Reference Include="AfricasTalkingCS, Version=1.2.4.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\AfricasTalking.NET.1.2.4\lib\netstandard2.0\AfricasTalkingCS.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.BonusSkins.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.BonusSkins.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\DevExpress 20.1\Components\Bin\Framework\DevExpress.BonusSkins.v20.1.dll</HintPath>
+    </Reference>
     <Reference Include="DevExpress.Data.v20.1" />
     <Reference Include="DevExpress.Data.Desktop.v20.1" />
-    <Reference Include="DevExpress.Dialogs.v20.1.Core, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.Printing.v20.1.Core, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Dialogs.v20.1.Core, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\DevExpress 20.1\Components\Bin\Framework\DevExpress.Dialogs.v20.1.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Printing.v20.1.Core, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\DevExpress 20.1\Components\Bin\Framework\DevExpress.Printing.v20.1.Core.dll</HintPath>
+    </Reference>
     <Reference Include="DevExpress.Utils.v20.1" />
     <Reference Include="DevExpress.XtraBars.v20.1" />
-    <Reference Include="DevExpress.XtraDialogs.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraDialogs.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\DevExpress 20.1\Components\Bin\Framework\DevExpress.XtraDialogs.v20.1.dll</HintPath>
+    </Reference>
     <Reference Include="DevExpress.XtraEditors.v20.1" />
-    <Reference Include="DevExpress.XtraGrid.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.XtraLayout.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.XtraTreeList.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraGrid.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\DevExpress 20.1\Components\Bin\Framework\DevExpress.XtraGrid.v20.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraLayout.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\DevExpress 20.1\Components\Bin\Framework\DevExpress.XtraLayout.v20.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraTreeList.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\DevExpress 20.1\Components\Bin\Framework\DevExpress.XtraTreeList.v20.1.dll</HintPath>
+    </Reference>
     <Reference Include="ExcelDataReader, Version=3.7.0.0, Culture=neutral, PublicKeyToken=93517dbe6a4012fa, processorArchitecture=MSIL">
       <HintPath>..\packages\ExcelDataReader.3.7.0\lib\net462\ExcelDataReader.dll</HintPath>
     </Reference>
@@ -77,17 +98,20 @@
       <HintPath>..\packages\ExcelDataReader.DataSet.3.7.0\lib\net462\ExcelDataReader.DataSet.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
-    <Reference Include="Microsoft.ReportViewer.Common, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.ReportViewer.Runtime.Common.12.0.2402.15\lib\Microsoft.ReportViewer.Common.dll</HintPath>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1652.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.ReportViewer.Runtime.Common.12.0.2402.15\lib\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1652.0\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.ReportViewer.Runtime.Common.12.0.2402.15\lib\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1652.0\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.ReportViewer.WinForms, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.ReportViewer.WinForms.v12.12.0.0.1\lib\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1652.0\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1652.0\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.SqlServer.Types, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.SqlServer.Types.160.1000.6\lib\net462\Microsoft.SqlServer.Types.dll</HintPath>
@@ -251,10 +275,22 @@
     <Compile Include="User Controls\UCPaymentReminders.vb">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="User Controls\UCPettyCashReport.Designer.vb">
+      <DependentUpon>UCPettyCashReport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="User Controls\UCPettyCashReport.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="User Controls\UCProjects.Designer.vb">
       <DependentUpon>UCProjects.vb</DependentUpon>
     </Compile>
     <Compile Include="User Controls\UCProjects.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Controls\UCReleaseUnit.Designer.vb">
+      <DependentUpon>UCReleaseUnit.vb</DependentUpon>
+    </Compile>
+    <Compile Include="User Controls\UCReleaseUnit.vb">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="User Controls\UCUserRights.Designer.vb">
@@ -294,6 +330,8 @@
       <SubType>Form</SubType>
     </Compile>
     <EmbeddedResource Include="My Project\licenses.licx" />
+    <EmbeddedResource Include="Rdlc\Template.rdlc" />
+    <EmbeddedResource Include="Rdlc\PettyCashReport.rdlc" />
     <EmbeddedResource Include="Rdlc\Receipt.rdlc" />
     <EmbeddedResource Include="Rdlc\rptUnitSaleReceipt.rdlc" />
     <EmbeddedResource Include="User Controls\UCAssignMemberNo.resx">
@@ -326,8 +364,14 @@
     <EmbeddedResource Include="User Controls\UCPaymentReminders.resx">
       <DependentUpon>UCPaymentReminders.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="User Controls\UCPettyCashReport.resx">
+      <DependentUpon>UCPettyCashReport.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="User Controls\UCProjects.resx">
       <DependentUpon>UCProjects.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Controls\UCReleaseUnit.resx">
+      <DependentUpon>UCReleaseUnit.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="User Controls\UCUserRights.resx">
       <DependentUpon>UCUserRights.vb</DependentUpon>
@@ -405,6 +449,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="icons8-property-16.ico" />
+    <None Include="Resources\icons8-property-16.png" />
+    <None Include="Resources\icons8-cash-and-credit-card-16.png" />
+    <None Include="Resources\icons8-reset-16.png" />
     <None Include="Resources\icons8-import-16.png" />
     <None Include="Resources\icons8-money-16.png" />
     <None Include="Resources\icons8-message-16.png" />
