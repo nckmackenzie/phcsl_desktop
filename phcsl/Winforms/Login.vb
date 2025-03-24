@@ -14,11 +14,11 @@ Public Class LoginForm
     Sub Login()
         LogedUserID = Nothing
         connstr = Nothing
-        If DatabaseComboBoxEdit.SelectedIndex = 0 Then
-            connstr = "Data Source=localhost\SQLEXPRESS;Initial Catalog=schoolDB;User ID=sa;Password=NA-b$H12;"
-        ElseIf DatabaseComboBoxEdit.SelectedIndex = 1 Then
-            connstr = "Data Source=localhost\SQLEXPRESS;Initial Catalog=schoolTest;User ID=sa;Password=NA-b$H12;"
-        End If
+        'If DatabaseComboBoxEdit.SelectedIndex = 0 Then
+        '    connstr = "Data Source=localhost\SQLEXPRESS;Initial Catalog=schoolDB;User ID=sa;Password=NA-b$H12;"
+        'ElseIf DatabaseComboBoxEdit.SelectedIndex = 1 Then
+        '    connstr = "Data Source=localhost\SQLEXPRESS;Initial Catalog=schoolTest;User ID=sa;Password=NA-b$H12;"
+        'End If
         Dim Active As Boolean
         Dim promptpwd As Boolean
         Dim pwddatechng As Date
@@ -91,12 +91,12 @@ Public Class LoginForm
             Exit Sub
         End If
         AppClass.UserLogin(UserNameTextEdit.Text, PasswordTextEdit.EditValue.ToString, PasswordTextEdit)
-        connstr = Nothing
-        If DatabaseComboBoxEdit.SelectedIndex = 0 Then
-            connstr = "Data Source=localhost\SQLEXPRESS;Initial Catalog=housingDB;User ID=sa;Password=NA-b$H12;"
-        ElseIf DatabaseComboBoxEdit.SelectedIndex = 1 Then
-            connstr = "Data Source=localhost\SQLEXPRESS;Initial Catalog=housingTest;User ID=sa;Password=NA-b$H12;"
-        End If
+        'connstr = Nothing
+        'If DatabaseComboBoxEdit.SelectedIndex = 0 Then
+        '    connstr = "Data Source=localhost\SQLEXPRESS;Initial Catalog=housingDB;User ID=sa;Password=NA-b$H12;"
+        'ElseIf DatabaseComboBoxEdit.SelectedIndex = 1 Then
+        '    connstr = "Data Source=localhost\SQLEXPRESS;Initial Catalog=housingTest;User ID=sa;Password=NA-b$H12;"
+        'End If
     End Sub
 #End Region
 End Class
