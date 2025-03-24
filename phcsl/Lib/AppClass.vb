@@ -5,15 +5,48 @@ Imports System.Data.SqlClient
 Imports System.Security.Cryptography
 Imports System.Text
 Imports System.Globalization
+Imports System.IO
+Imports System.Configuration
 Public Class AppClass
+    Private Shared Function ReadIniValue(ByVal section As String, ByVal key As String) As String
+        Dim filePath As String = Path.Combine(Application.StartupPath, "config.ini")
+
+        If Not File.Exists(filePath) Then
+            MessageBox.Show("Config file not found!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Return Nothing
+        End If
+
+        Dim lines() As String = File.ReadAllLines(filePath)
+        Dim currentSection As String = ""
+
+        For Each line As String In lines
+            line = line.Trim()
+            If line.StartsWith("[") AndAlso line.EndsWith("]") Then
+                currentSection = line.Substring(1, line.Length - 2)
+            ElseIf currentSection = section AndAlso line.Contains("=") Then
+                Dim parts() As String = line.Split("="c)
+                If parts(0).Trim() = key Then
+                    Return parts(1).Trim()
+                End If
+            End If
+        Next
+
+        Return Nothing
+    End Function
     Public Shared Sub UserLogin(userid As String, password As String, txtbx As DevExpress.XtraEditors.TextEdit)
         LogedUserID = Nothing
         connstr = Nothing
+        Dim sqlInstance As String = ReadIniValue("Database", "Server")
         If LoginForm.DatabaseComboBoxEdit.SelectedIndex = 0 Then
-            connstr = "Data Source=localhost\SQLEXPRESS;Initial Catalog=housingDB;User ID=sa;Password=NA-b$H12;"
+            connstr = $"Data Source={sqlInstance};Initial Catalog=housingDB;User ID=sa;Password=NA-b$H12;"
         ElseIf LoginForm.DatabaseComboBoxEdit.SelectedIndex = 1 Then
-            connstr = "Data Source=localhost\SQLEXPRESS;Initial Catalog=housingTest;User ID=sa;Password=NA-b$H12;"
+            connstr = $"Data Source={sqlInstance};Initial Catalog=housingTest;User ID=sa;Password=NA-b$H12;"
         End If
+        'If LoginForm.DatabaseComboBoxEdit.SelectedIndex = 0 Then
+        '    connstr = "Data Source=localhost\SQLEXPRESS;Initial Catalog=housingDB;User ID=sa;Password=NA-b$H12;"
+        'ElseIf LoginForm.DatabaseComboBoxEdit.SelectedIndex = 1 Then
+        '    connstr = "Data Source=localhost\SQLEXPRESS;Initial Catalog=housingTest;User ID=sa;Password=NA-b$H12;"
+        'End If
 
         Dim salt As String = ""
         Dim Active As Boolean
