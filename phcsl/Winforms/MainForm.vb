@@ -31,7 +31,7 @@ Public Class MainForm
 
                 Dim db As String = connection.Database.ToString
 
-                sql = "BACKUP DATABASE [" + db + "] TO DISK='" + BackUpLocation.ToString + "\\" + "Database_Backup " + Date.Now.ToString("dd-MM-yy--HH-mm-ss") + ".bak'"
+                sql = "BACKUP DATABASE [" + db + "] TO DISK='" + BackupLocation.ToString + "\\" + "Database_Backup " + Date.Now.ToString("dd-MM-yy--HH-mm-ss") + ".bak'"
                 Using cmd = New System.Data.SqlClient.SqlCommand(sql, connection)
                     cmd.ExecuteNonQuery()
                     ' XtraMessageBox.Show("Backup Successful", "Alert", MessageBoxButtons.OK, MessageBoxIcon.Information)
@@ -40,6 +40,14 @@ Public Class MainForm
         Catch ex As Exception
             AppClass.ShowError(ex.Message)
         End Try
+    End Sub
+    Public Sub AddUserControlToContainer(ByVal ControlInstance As Control, ByVal HeaderText As DevExpress.XtraBars.Navigation.AccordionControlElement)
+        If Not AppContainer.Controls.Contains(ControlInstance) Then
+            AppContainer.Controls.Add(ControlInstance)
+            ControlInstance.Dock = DockStyle.Fill
+        End If
+        ControlInstance.BringToFront()
+        Me.Text = HeaderText.Text.ToString & If(CompanyName IsNot Nothing, " / " & CompanyName, "")
     End Sub
     Private Sub AceMessaging_Click(sender As Object, e As EventArgs) Handles aceMessaging.Click
         If Not AppContainer.Controls.Contains(UCPaymentReminders.Instance) Then
@@ -182,5 +190,17 @@ Public Class MainForm
         End If
         UCReleaseUnit.Instance.BringToFront()
         TopBarItem.Caption = AceReleaseUnit.Text.ToString
+    End Sub
+    Private Sub AcepettyCashUtilization_Click(sender As Object, e As EventArgs) Handles AcepettyCashUtilization.Click
+        If Not AppContainer.Controls.Contains(UCPettyCashReport.Instance) Then
+            AppContainer.Controls.Add(UCPettyCashReport.Instance)
+            UCPettyCashReport.Instance.Dock = DockStyle.Fill
+            UCPettyCashReport.Instance.BringToFront()
+        End If
+        UCPettyCashReport.Instance.BringToFront()
+        TopBarItem.Caption = AcepettyCashUtilization.Text.ToString
+    End Sub
+    Private Sub AceUnits_Click(sender As Object, e As EventArgs) Handles AceUnits.Click
+        AddUserControlToContainer(UCUnits.Instance, AceUnits)
     End Sub
 End Class
