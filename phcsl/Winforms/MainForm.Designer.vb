@@ -53,6 +53,7 @@ Partial Class MainForm
         Me.TopBarItem = New DevExpress.XtraBars.BarStaticItem()
         Me.FluentFormDefaultManager1 = New DevExpress.XtraBars.FluentDesignSystem.FluentFormDefaultManager(Me.components)
         Me.AccordionControlElement1 = New DevExpress.XtraBars.Navigation.AccordionControlElement()
+        Me.AceUnitSale = New DevExpress.XtraBars.Navigation.AccordionControlElement()
         CType(Me.AccordionControl1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.FluentDesignFormControl1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.FluentFormDefaultManager1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -210,7 +211,7 @@ Partial Class MainForm
         '
         'aceProjects
         '
-        Me.aceProjects.Elements.AddRange(New DevExpress.XtraBars.Navigation.AccordionControlElement() {Me.AceMembers, Me.AceAssignMemberNo, Me.AccordionControlSeparator3, Me.AceProjectsForm, Me.AceUnits, Me.AceReleaseUnit})
+        Me.aceProjects.Elements.AddRange(New DevExpress.XtraBars.Navigation.AccordionControlElement() {Me.AceMembers, Me.AceAssignMemberNo, Me.AccordionControlSeparator3, Me.AceProjectsForm, Me.AceUnits, Me.AceUnitSale, Me.AceReleaseUnit})
         Me.aceProjects.Expanded = True
         Me.aceProjects.Name = "aceProjects"
         Me.aceProjects.Text = "Projects"
@@ -368,6 +369,13 @@ Partial Class MainForm
         Me.AccordionControlElement1.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item
         Me.AccordionControlElement1.Text = "Element1"
         '
+        'AceUnitSale
+        '
+        Me.AceUnitSale.ImageOptions.Image = Global.phcsl.My.Resources.Resources.icons8_sale_16
+        Me.AceUnitSale.Name = "AceUnitSale"
+        Me.AceUnitSale.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item
+        Me.AceUnitSale.Text = "Unit Sale"
+        '
         'MainForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 16.0!)
@@ -419,4 +427,5 @@ Partial Class MainForm
     Friend WithEvents AceReleaseUnit As DevExpress.XtraBars.Navigation.AccordionControlElement
     Friend WithEvents AcepettyCashUtilization As DevExpress.XtraBars.Navigation.AccordionControlElement
     Friend WithEvents AceUnits As DevExpress.XtraBars.Navigation.AccordionControlElement
+    Friend WithEvents AceUnitSale As DevExpress.XtraBars.Navigation.AccordionControlElement
 End Class
