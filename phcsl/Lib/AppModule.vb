@@ -35,4 +35,21 @@ Module AppModule
         Dim newparam As New SqlParameter(ParameterName, value)
         params.Add(newparam)
     End Sub
+    Public Function ProcessEditValue(ByVal input As Object) As Object
+        If input Is Nothing OrElse String.IsNullOrWhiteSpace(input.ToString()) Then
+            Return DBNull.Value
+        End If
+
+        Dim number As Decimal
+        If Decimal.TryParse(input.ToString(), number) Then
+            Return number
+        End If
+
+        If TypeOf input Is Date Then
+            Return Convert.ToDateTime(input)
+        End If
+
+        Return input.ToString().Trim().ToLower()
+    End Function
+
 End Module
