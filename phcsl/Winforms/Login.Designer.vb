@@ -19,6 +19,7 @@ Partial Class LoginForm
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(LoginForm))
         Me.LayoutControl1 = New DevExpress.XtraLayout.LayoutControl()
         Me.LoginBtn = New DevExpress.XtraEditors.SimpleButton()
         Me.DatabaseComboBoxEdit = New DevExpress.XtraEditors.ComboBoxEdit()
@@ -170,6 +171,7 @@ Partial Class LoginForm
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(460, 130)
         Me.Controls.Add(Me.LayoutControl1)
+        Me.IconOptions.Icon = CType(resources.GetObject("LoginForm.IconOptions.Icon"), System.Drawing.Icon)
         Me.IconOptions.Image = Global.phcsl.My.Resources.Resources.logo
         Me.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.MaximizeBox = False
