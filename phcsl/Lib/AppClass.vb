@@ -198,8 +198,8 @@ Public Class AppClass
     Public Shared Sub ShowNotification(msg As String)
         XtraMessageBox.Show(msg, "Alert", MessageBoxButtons.OK, MessageBoxIcon.Information)
     End Sub
-    Public Shared Sub ShowError(msg As String)
-        XtraMessageBox.Show(msg, "Alert", MessageBoxButtons.OK, MessageBoxIcon.Error)
+    Public Shared Sub ShowError(msg As String, Optional ShowAsWarning As Boolean = False)
+        XtraMessageBox.Show(msg, "Alert", MessageBoxButtons.OK, If(Not ShowAsWarning, MessageBoxIcon.Error, MessageBoxIcon.Warning))
     End Sub
     Public Shared Sub GenerateID(Query As String, Field As String, TxtBox As TextEdit, Code As String, format As String, Optional Prexfix As String = Nothing)
         '//sub to generate the last id from the database
