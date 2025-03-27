@@ -592,5 +592,29 @@ Public Class AppClass
             Return False
         End If
     End Function
+    Public Shared Function CalculateVAT(amount As Decimal, vatType As Integer, vatRate As Decimal) As (AmountExcl As Decimal, VatAmount As Decimal, AmountIncl As Decimal)
+        Dim amountExcl As Decimal = 0
+        Dim vatAmount As Decimal = 0
+        Dim amountIncl As Decimal = 0
+
+        Select Case vatType
+            Case 1 ' No VAT
+                amountExcl = amount
+                vatAmount = 0
+                amountIncl = amount
+            Case 2 ' VAT Inclusive
+                amountExcl = amount / (1 + vatRate / 100)
+                vatAmount = amount - amountExcl
+                amountIncl = amount
+            Case 3 ' VAT Exclusive
+                amountExcl = amount
+                vatAmount = amount * (vatRate / 100)
+                amountIncl = amount + vatAmount
+                'Case Else
+                '    Throw New ArgumentException("Invalid VAT Type")
+        End Select
+
+        Return (amountExcl, vatAmount, amountIncl)
+    End Function
 
 End Class
