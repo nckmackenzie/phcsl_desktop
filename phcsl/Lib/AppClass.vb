@@ -616,5 +616,7 @@ Public Class AppClass
 
         Return (amountExcl, vatAmount, amountIncl)
     End Function
-
+    Public Shared Function IsValidDateRange(fromDate As Date, toDate As Date) As Boolean
+        Return fromDate.Date < toDate.Date
+    End Function
 End Class
