@@ -55,6 +55,7 @@ Partial Class MainForm
         Me.TopBarItem = New DevExpress.XtraBars.BarStaticItem()
         Me.FluentFormDefaultManager1 = New DevExpress.XtraBars.FluentDesignSystem.FluentFormDefaultManager(Me.components)
         Me.AccordionControlElement1 = New DevExpress.XtraBars.Navigation.AccordionControlElement()
+        Me.AceUnitReservation = New DevExpress.XtraBars.Navigation.AccordionControlElement()
         CType(Me.AccordionControl1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.FluentDesignFormControl1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.FluentFormDefaultManager1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -212,7 +213,8 @@ Partial Class MainForm
         '
         'aceProjects
         '
-        Me.aceProjects.Elements.AddRange(New DevExpress.XtraBars.Navigation.AccordionControlElement() {Me.AceMembers, Me.AceAssignMemberNo, Me.AccordionControlSeparator3, Me.AceProjectsForm, Me.AceUnits, Me.AceUnitSale, Me.AceReleaseUnit})
+        Me.aceProjects.Elements.AddRange(New DevExpress.XtraBars.Navigation.AccordionControlElement() {Me.AceMembers, Me.AceAssignMemberNo, Me.AccordionControlSeparator3, Me.AceProjectsForm, Me.AceUnits, Me.AceUnitSale, Me.AceUnitReservation, Me.AceReleaseUnit})
+        Me.aceProjects.Expanded = True
         Me.aceProjects.Name = "aceProjects"
         Me.aceProjects.Text = "Projects"
         '
@@ -289,7 +291,6 @@ Partial Class MainForm
         'aceFinance
         '
         Me.aceFinance.Elements.AddRange(New DevExpress.XtraBars.Navigation.AccordionControlElement() {Me.AceMemberContributions, Me.AceDividentPayments, Me.AceExpenses, Me.AceImportExpenses})
-        Me.aceFinance.Expanded = True
         Me.aceFinance.Name = "aceFinance"
         Me.aceFinance.Text = "Finance"
         '
@@ -383,6 +384,13 @@ Partial Class MainForm
         Me.AccordionControlElement1.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item
         Me.AccordionControlElement1.Text = "Element1"
         '
+        'AceUnitReservation
+        '
+        Me.AceUnitReservation.ImageOptions.Image = Global.phcsl.My.Resources.Resources.icons8_booking_16
+        Me.AceUnitReservation.Name = "AceUnitReservation"
+        Me.AceUnitReservation.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item
+        Me.AceUnitReservation.Text = "Unit Reservation"
+        '
         'MainForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 16.0!)
@@ -436,4 +444,5 @@ Partial Class MainForm
     Friend WithEvents AceUnits As DevExpress.XtraBars.Navigation.AccordionControlElement
     Friend WithEvents AceUnitSale As DevExpress.XtraBars.Navigation.AccordionControlElement
     Friend WithEvents AceExpenses As DevExpress.XtraBars.Navigation.AccordionControlElement
+    Friend WithEvents AceUnitReservation As DevExpress.XtraBars.Navigation.AccordionControlElement
 End Class
