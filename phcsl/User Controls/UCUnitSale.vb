@@ -54,9 +54,9 @@ Public Class UCUnitSale
         PaymethodLookUpEdit.Properties.ReadOnly = False
         ProjectLookUpEdit.Properties.ReadOnly = False
         UnitLookUpEdit.Properties.ReadOnly = False
-        PlanComboBoxEdit.Properties.ReadOnly = False
         TitleTextEdit.Properties.ReadOnly = False
         DeductionTypeComboBoxEdit.Properties.ReadOnly = False
+        PlanComboBoxEdit.SelectedIndex = 0
         DeductionTypeComboBoxEdit.SelectedIndex = 3
         IsEdit = False
         ID = Nothing
@@ -130,8 +130,15 @@ Public Class UCUnitSale
         End Select
     End Function
     Sub GetUnitPrice()
-        Dim PlansSelected As Boolean = PlanComboBoxEdit.SelectedIndex > -1
-        If Not PlansSelected Then
+        If PlanComboBoxEdit.SelectedIndex = 1 Then
+            If MemberNonMemberComboBoxEdit.SelectedIndex = 1 Then
+                AddParams("@id", CInt(UnitLookUpEdit.EditValue))
+                UnitPriceTextEdit.EditValue = CDec(AppClass.FetchDBValue("SELECT COALESCE(sellingPriceNonMemberTwelvePlan,0) AS UnitPrice FROM tblUnits WHERE ID=@id"))
+            Else
+                AddParams("@id", CInt(UnitLookUpEdit.EditValue))
+                UnitPriceTextEdit.EditValue = CDec(AppClass.FetchDBValue("SELECT COALESCE(sellingPriceMemberTwelvePlan,0) AS UnitPrice FROM tblUnits WHERE ID=@id"))
+            End If
+        Else
             If MemberNonMemberComboBoxEdit.SelectedIndex = 1 Then
                 AddParams("@id", CInt(UnitLookUpEdit.EditValue))
                 UnitPriceTextEdit.EditValue = CDec(AppClass.FetchDBValue("SELECT COALESCE(unitSellingPriceNonMember,0) AS UnitPrice FROM tblUnits WHERE ID=@id"))
@@ -139,15 +146,25 @@ Public Class UCUnitSale
                 AddParams("@id", CInt(UnitLookUpEdit.EditValue))
                 UnitPriceTextEdit.EditValue = CDec(AppClass.FetchDBValue("SELECT COALESCE(unitSellingPriceMember,0) AS UnitPrice FROM tblUnits WHERE ID=@id"))
             End If
-        Else
-            If PlanComboBoxEdit.SelectedIndex = 0 Then
-                AddParams("@id", CInt(UnitLookUpEdit.EditValue))
-                UnitPriceTextEdit.EditValue = CDec(AppClass.FetchDBValue("SELECT COALESCE(sellingPriceSixPlan,0) AS UnitPrice FROM tblUnits WHERE ID=@id"))
-            Else
-                AddParams("@id", CInt(UnitLookUpEdit.EditValue))
-                UnitPriceTextEdit.EditValue = CDec(AppClass.FetchDBValue("SELECT COALESCE(sellingPriceTwelvePlan,0) AS UnitPrice FROM tblUnits WHERE ID=@id"))
-            End If
         End If
+        Dim PlansSelected As Boolean = PlanComboBoxEdit.SelectedIndex > -1
+        'If Not PlansSelected Then
+        '    If MemberNonMemberComboBoxEdit.SelectedIndex = 1 Then
+        '        AddParams("@id", CInt(UnitLookUpEdit.EditValue))
+        '        UnitPriceTextEdit.EditValue = CDec(AppClass.FetchDBValue("SELECT COALESCE(unitSellingPriceNonMember,0) AS UnitPrice FROM tblUnits WHERE ID=@id"))
+        '    Else
+        '        AddParams("@id", CInt(UnitLookUpEdit.EditValue))
+        '        UnitPriceTextEdit.EditValue = CDec(AppClass.FetchDBValue("SELECT COALESCE(unitSellingPriceMember,0) AS UnitPrice FROM tblUnits WHERE ID=@id"))
+        '    End If
+        'Else
+        '    If PlanComboBoxEdit.SelectedIndex = 0 Then
+        '        AddParams("@id", CInt(UnitLookUpEdit.EditValue))
+        '        UnitPriceTextEdit.EditValue = CDec(AppClass.FetchDBValue("SELECT COALESCE(sellingPriceSixPlan,0) AS UnitPrice FROM tblUnits WHERE ID=@id"))
+        '    Else
+        '        AddParams("@id", CInt(UnitLookUpEdit.EditValue))
+        '        UnitPriceTextEdit.EditValue = CDec(AppClass.FetchDBValue("SELECT COALESCE(sellingPriceTwelvePlan,0) AS UnitPrice FROM tblUnits WHERE ID=@id"))
+        '    End If
+        'End If
         NetTextEdit.EditValue = CalculateNetAmount().ToString("N")
     End Sub
     Function Datavalidation() As Boolean
@@ -897,14 +914,14 @@ Public Class UCUnitSale
         IDNoTextEdit.EditValue = Nothing
         MemberSearchLookUpEdit.Properties.ReadOnly = MemberNonMemberComboBoxEdit.SelectedIndex > 0
         MemberSearchLookUpEdit.EditValue = Nothing
-        With PlanComboBoxEdit
-            .EditValue = Nothing
-            .Properties.ReadOnly = MemberNonMemberComboBoxEdit.SelectedIndex = 1
-        End With
-        With DeductionTypeComboBoxEdit
-            .SelectedIndex = 3
-            .Properties.ReadOnly = MemberNonMemberComboBoxEdit.SelectedIndex = 1
-        End With
+        'With PlanComboBoxEdit
+        '    .EditValue = Nothing
+        '    .Properties.ReadOnly = MemberNonMemberComboBoxEdit.SelectedIndex = 1
+        'End With
+        'With DeductionTypeComboBoxEdit
+        '    .SelectedIndex = 3
+        '    .Properties.ReadOnly = MemberNonMemberComboBoxEdit.SelectedIndex = 1
+        'End With
         GetUnitPrice()
     End Sub
     Private Sub ProjectLookUpEdit_EditValueChanged(sender As Object, e As EventArgs) Handles ProjectLookUpEdit.EditValueChanged
