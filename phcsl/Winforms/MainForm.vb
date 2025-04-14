@@ -121,4 +121,7 @@ Public Class MainForm
     Private Sub AceUnitReservation_Click(sender As Object, e As EventArgs) Handles AceUnitReservation.Click
         AddUserControlToContainer(UCUnitReservation.Instance, AceUnitReservation)
     End Sub
+    Private Sub AceInterestOnDeposit_Click(sender As Object, e As EventArgs) Handles AceInterestOnDeposit.Click
+        AddUserControlToContainer(UCInterestOnDeposit.Instance, AceInterestOnDeposit)
+    End Sub
 End Class
