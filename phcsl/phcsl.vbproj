@@ -245,6 +245,12 @@
     <Compile Include="User Controls\UCDividendsPayments.vb">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="User Controls\UCExpenses.Designer.vb">
+      <DependentUpon>UCExpenses.vb</DependentUpon>
+    </Compile>
+    <Compile Include="User Controls\UCExpenses.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="User Controls\UCGeneralMessage.Designer.vb">
       <DependentUpon>UCGeneralMessage.vb</DependentUpon>
     </Compile>
@@ -255,6 +261,12 @@
       <DependentUpon>UCImportExpenses.vb</DependentUpon>
     </Compile>
     <Compile Include="User Controls\UCImportExpenses.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Controls\UCInterestOnDeposit.Designer.vb">
+      <DependentUpon>UCInterestOnDeposit.vb</DependentUpon>
+    </Compile>
+    <Compile Include="User Controls\UCInterestOnDeposit.vb">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="User Controls\UCMemberCollections.Designer.vb">
@@ -291,6 +303,24 @@
       <DependentUpon>UCReleaseUnit.vb</DependentUpon>
     </Compile>
     <Compile Include="User Controls\UCReleaseUnit.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Controls\UCUnitReservation.Designer.vb">
+      <DependentUpon>UCUnitReservation.vb</DependentUpon>
+    </Compile>
+    <Compile Include="User Controls\UCUnitReservation.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Controls\UCUnits.Designer.vb">
+      <DependentUpon>UCUnits.vb</DependentUpon>
+    </Compile>
+    <Compile Include="User Controls\UCUnits.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Controls\UCUnitSale.Designer.vb">
+      <DependentUpon>UCUnitSale.vb</DependentUpon>
+    </Compile>
+    <Compile Include="User Controls\UCUnitSale.vb">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="User Controls\UCUserRights.Designer.vb">
@@ -349,11 +379,17 @@
     <EmbeddedResource Include="User Controls\UCDividendsPayments.resx">
       <DependentUpon>UCDividendsPayments.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="User Controls\UCExpenses.resx">
+      <DependentUpon>UCExpenses.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="User Controls\UCGeneralMessage.resx">
       <DependentUpon>UCGeneralMessage.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="User Controls\UCImportExpenses.resx">
       <DependentUpon>UCImportExpenses.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Controls\UCInterestOnDeposit.resx">
+      <DependentUpon>UCInterestOnDeposit.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="User Controls\UCMemberCollections.resx">
       <DependentUpon>UCMemberCollections.vb</DependentUpon>
@@ -372,6 +408,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="User Controls\UCReleaseUnit.resx">
       <DependentUpon>UCReleaseUnit.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Controls\UCUnitReservation.resx">
+      <DependentUpon>UCUnitReservation.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Controls\UCUnits.resx">
+      <DependentUpon>UCUnits.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Controls\UCUnitSale.resx">
+      <DependentUpon>UCUnitSale.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="User Controls\UCUserRights.resx">
       <DependentUpon>UCUserRights.vb</DependentUpon>
@@ -449,6 +494,11 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="icons8-property-16.ico" />
+    <None Include="Resources\icons8-interest-16.png" />
+    <None Include="Resources\icons8-booking-16.png" />
+    <None Include="Resources\icons8-budget-16.png" />
+    <None Include="Resources\icons8-sale-16.png" />
+    <None Include="Resources\icons8-refresh-16.png" />
     <None Include="Resources\icons8-property-16.png" />
     <None Include="Resources\icons8-cash-and-credit-card-16.png" />
     <None Include="Resources\icons8-reset-16.png" />
