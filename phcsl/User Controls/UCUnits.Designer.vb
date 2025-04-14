@@ -31,8 +31,8 @@ Partial Class UCUnits
         Me.CommissionCriteriaComboBoxEdit = New DevExpress.XtraEditors.ComboBoxEdit()
         Me.LandSizeTextEdit = New DevExpress.XtraEditors.TextEdit()
         Me.TitleFeeTextEdit = New DevExpress.XtraEditors.TextEdit()
-        Me.SellingPrice12MonthPlanTextEdit = New DevExpress.XtraEditors.TextEdit()
-        Me.SellingPrice6monthPlanTextEdit = New DevExpress.XtraEditors.TextEdit()
+        Me.SellingPriceNonMember12MonthPlanTextEdit = New DevExpress.XtraEditors.TextEdit()
+        Me.SellingPriceMember12monthPlanTextEdit = New DevExpress.XtraEditors.TextEdit()
         Me.NoneMemberSellingPriceTextEdit = New DevExpress.XtraEditors.TextEdit()
         Me.MemberSellingPriceTextEdit = New DevExpress.XtraEditors.TextEdit()
         Me.RemainingUnitsTextEdit = New DevExpress.XtraEditors.TextEdit()
@@ -76,8 +76,8 @@ Partial Class UCUnits
         CType(Me.CommissionCriteriaComboBoxEdit.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LandSizeTextEdit.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TitleFeeTextEdit.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.SellingPrice12MonthPlanTextEdit.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.SellingPrice6monthPlanTextEdit.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.SellingPriceNonMember12MonthPlanTextEdit.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.SellingPriceMember12monthPlanTextEdit.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.NoneMemberSellingPriceTextEdit.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.MemberSellingPriceTextEdit.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RemainingUnitsTextEdit.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -170,8 +170,8 @@ Partial Class UCUnits
         Me.LayoutControl1.Controls.Add(Me.CommissionCriteriaComboBoxEdit)
         Me.LayoutControl1.Controls.Add(Me.LandSizeTextEdit)
         Me.LayoutControl1.Controls.Add(Me.TitleFeeTextEdit)
-        Me.LayoutControl1.Controls.Add(Me.SellingPrice12MonthPlanTextEdit)
-        Me.LayoutControl1.Controls.Add(Me.SellingPrice6monthPlanTextEdit)
+        Me.LayoutControl1.Controls.Add(Me.SellingPriceNonMember12MonthPlanTextEdit)
+        Me.LayoutControl1.Controls.Add(Me.SellingPriceMember12monthPlanTextEdit)
         Me.LayoutControl1.Controls.Add(Me.NoneMemberSellingPriceTextEdit)
         Me.LayoutControl1.Controls.Add(Me.MemberSellingPriceTextEdit)
         Me.LayoutControl1.Controls.Add(Me.RemainingUnitsTextEdit)
@@ -203,141 +203,141 @@ Partial Class UCUnits
         '
         'UnitBuyingPriceTextEdit
         '
-        Me.UnitBuyingPriceTextEdit.Location = New System.Drawing.Point(185, 237)
+        Me.UnitBuyingPriceTextEdit.Location = New System.Drawing.Point(261, 237)
         Me.UnitBuyingPriceTextEdit.Name = "UnitBuyingPriceTextEdit"
         Me.UnitBuyingPriceTextEdit.Properties.Mask.EditMask = "n"
         Me.UnitBuyingPriceTextEdit.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric
-        Me.UnitBuyingPriceTextEdit.Size = New System.Drawing.Size(1040, 22)
+        Me.UnitBuyingPriceTextEdit.Size = New System.Drawing.Size(964, 22)
         Me.UnitBuyingPriceTextEdit.StyleController = Me.LayoutControl1
         Me.UnitBuyingPriceTextEdit.TabIndex = 17
         '
         'CommissionValueTextEdit
         '
-        Me.CommissionValueTextEdit.Location = New System.Drawing.Point(787, 211)
+        Me.CommissionValueTextEdit.Location = New System.Drawing.Point(863, 211)
         Me.CommissionValueTextEdit.Name = "CommissionValueTextEdit"
         Me.CommissionValueTextEdit.Properties.Mask.EditMask = "n"
         Me.CommissionValueTextEdit.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric
-        Me.CommissionValueTextEdit.Size = New System.Drawing.Size(438, 22)
+        Me.CommissionValueTextEdit.Size = New System.Drawing.Size(362, 22)
         Me.CommissionValueTextEdit.StyleController = Me.LayoutControl1
         Me.CommissionValueTextEdit.TabIndex = 16
         '
         'CommissionCriteriaComboBoxEdit
         '
-        Me.CommissionCriteriaComboBoxEdit.Location = New System.Drawing.Point(185, 211)
+        Me.CommissionCriteriaComboBoxEdit.Location = New System.Drawing.Point(261, 211)
         Me.CommissionCriteriaComboBoxEdit.Name = "CommissionCriteriaComboBoxEdit"
         Me.CommissionCriteriaComboBoxEdit.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
         Me.CommissionCriteriaComboBoxEdit.Properties.DropDownRows = 2
         Me.CommissionCriteriaComboBoxEdit.Properties.Items.AddRange(New Object() {"Flat Amount", "Percentage Of Sale"})
         Me.CommissionCriteriaComboBoxEdit.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor
-        Me.CommissionCriteriaComboBoxEdit.Size = New System.Drawing.Size(437, 22)
+        Me.CommissionCriteriaComboBoxEdit.Size = New System.Drawing.Size(361, 22)
         Me.CommissionCriteriaComboBoxEdit.StyleController = Me.LayoutControl1
         Me.CommissionCriteriaComboBoxEdit.TabIndex = 15
         '
         'LandSizeTextEdit
         '
-        Me.LandSizeTextEdit.Location = New System.Drawing.Point(787, 185)
+        Me.LandSizeTextEdit.Location = New System.Drawing.Point(863, 185)
         Me.LandSizeTextEdit.Name = "LandSizeTextEdit"
-        Me.LandSizeTextEdit.Size = New System.Drawing.Size(438, 22)
+        Me.LandSizeTextEdit.Size = New System.Drawing.Size(362, 22)
         Me.LandSizeTextEdit.StyleController = Me.LayoutControl1
         Me.LandSizeTextEdit.TabIndex = 14
         '
         'TitleFeeTextEdit
         '
-        Me.TitleFeeTextEdit.Location = New System.Drawing.Point(185, 185)
+        Me.TitleFeeTextEdit.Location = New System.Drawing.Point(261, 185)
         Me.TitleFeeTextEdit.Name = "TitleFeeTextEdit"
         Me.TitleFeeTextEdit.Properties.Mask.EditMask = "n"
         Me.TitleFeeTextEdit.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric
-        Me.TitleFeeTextEdit.Size = New System.Drawing.Size(437, 22)
+        Me.TitleFeeTextEdit.Size = New System.Drawing.Size(361, 22)
         Me.TitleFeeTextEdit.StyleController = Me.LayoutControl1
         Me.TitleFeeTextEdit.TabIndex = 13
         '
-        'SellingPrice12MonthPlanTextEdit
+        'SellingPriceNonMember12MonthPlanTextEdit
         '
-        Me.SellingPrice12MonthPlanTextEdit.Location = New System.Drawing.Point(787, 159)
-        Me.SellingPrice12MonthPlanTextEdit.Name = "SellingPrice12MonthPlanTextEdit"
-        Me.SellingPrice12MonthPlanTextEdit.Size = New System.Drawing.Size(438, 22)
-        Me.SellingPrice12MonthPlanTextEdit.StyleController = Me.LayoutControl1
-        Me.SellingPrice12MonthPlanTextEdit.TabIndex = 12
+        Me.SellingPriceNonMember12MonthPlanTextEdit.Location = New System.Drawing.Point(863, 159)
+        Me.SellingPriceNonMember12MonthPlanTextEdit.Name = "SellingPriceNonMember12MonthPlanTextEdit"
+        Me.SellingPriceNonMember12MonthPlanTextEdit.Size = New System.Drawing.Size(362, 22)
+        Me.SellingPriceNonMember12MonthPlanTextEdit.StyleController = Me.LayoutControl1
+        Me.SellingPriceNonMember12MonthPlanTextEdit.TabIndex = 12
         '
-        'SellingPrice6monthPlanTextEdit
+        'SellingPriceMember12monthPlanTextEdit
         '
-        Me.SellingPrice6monthPlanTextEdit.Location = New System.Drawing.Point(185, 159)
-        Me.SellingPrice6monthPlanTextEdit.Name = "SellingPrice6monthPlanTextEdit"
-        Me.SellingPrice6monthPlanTextEdit.Properties.Mask.EditMask = "n"
-        Me.SellingPrice6monthPlanTextEdit.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric
-        Me.SellingPrice6monthPlanTextEdit.Size = New System.Drawing.Size(437, 22)
-        Me.SellingPrice6monthPlanTextEdit.StyleController = Me.LayoutControl1
-        Me.SellingPrice6monthPlanTextEdit.TabIndex = 11
+        Me.SellingPriceMember12monthPlanTextEdit.Location = New System.Drawing.Point(261, 159)
+        Me.SellingPriceMember12monthPlanTextEdit.Name = "SellingPriceMember12monthPlanTextEdit"
+        Me.SellingPriceMember12monthPlanTextEdit.Properties.Mask.EditMask = "n"
+        Me.SellingPriceMember12monthPlanTextEdit.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric
+        Me.SellingPriceMember12monthPlanTextEdit.Size = New System.Drawing.Size(361, 22)
+        Me.SellingPriceMember12monthPlanTextEdit.StyleController = Me.LayoutControl1
+        Me.SellingPriceMember12monthPlanTextEdit.TabIndex = 11
         '
         'NoneMemberSellingPriceTextEdit
         '
-        Me.NoneMemberSellingPriceTextEdit.Location = New System.Drawing.Point(787, 133)
+        Me.NoneMemberSellingPriceTextEdit.Location = New System.Drawing.Point(863, 133)
         Me.NoneMemberSellingPriceTextEdit.Name = "NoneMemberSellingPriceTextEdit"
         Me.NoneMemberSellingPriceTextEdit.Properties.Mask.EditMask = "n"
         Me.NoneMemberSellingPriceTextEdit.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric
-        Me.NoneMemberSellingPriceTextEdit.Size = New System.Drawing.Size(438, 22)
+        Me.NoneMemberSellingPriceTextEdit.Size = New System.Drawing.Size(362, 22)
         Me.NoneMemberSellingPriceTextEdit.StyleController = Me.LayoutControl1
         Me.NoneMemberSellingPriceTextEdit.TabIndex = 10
         '
         'MemberSellingPriceTextEdit
         '
-        Me.MemberSellingPriceTextEdit.Location = New System.Drawing.Point(185, 133)
+        Me.MemberSellingPriceTextEdit.Location = New System.Drawing.Point(261, 133)
         Me.MemberSellingPriceTextEdit.Name = "MemberSellingPriceTextEdit"
         Me.MemberSellingPriceTextEdit.Properties.Mask.EditMask = "n"
         Me.MemberSellingPriceTextEdit.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric
-        Me.MemberSellingPriceTextEdit.Size = New System.Drawing.Size(437, 22)
+        Me.MemberSellingPriceTextEdit.Size = New System.Drawing.Size(361, 22)
         Me.MemberSellingPriceTextEdit.StyleController = Me.LayoutControl1
         Me.MemberSellingPriceTextEdit.TabIndex = 9
         '
         'RemainingUnitsTextEdit
         '
-        Me.RemainingUnitsTextEdit.Location = New System.Drawing.Point(787, 107)
+        Me.RemainingUnitsTextEdit.Location = New System.Drawing.Point(863, 107)
         Me.RemainingUnitsTextEdit.Name = "RemainingUnitsTextEdit"
         Me.RemainingUnitsTextEdit.Properties.ReadOnly = True
-        Me.RemainingUnitsTextEdit.Size = New System.Drawing.Size(438, 22)
+        Me.RemainingUnitsTextEdit.Size = New System.Drawing.Size(362, 22)
         Me.RemainingUnitsTextEdit.StyleController = Me.LayoutControl1
         Me.RemainingUnitsTextEdit.TabIndex = 8
         Me.RemainingUnitsTextEdit.TabStop = False
         '
         'UnitsToCreateTextEdit
         '
-        Me.UnitsToCreateTextEdit.Location = New System.Drawing.Point(185, 107)
+        Me.UnitsToCreateTextEdit.Location = New System.Drawing.Point(261, 107)
         Me.UnitsToCreateTextEdit.Name = "UnitsToCreateTextEdit"
         Me.UnitsToCreateTextEdit.Properties.Mask.EditMask = "n"
         Me.UnitsToCreateTextEdit.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric
-        Me.UnitsToCreateTextEdit.Size = New System.Drawing.Size(437, 22)
+        Me.UnitsToCreateTextEdit.Size = New System.Drawing.Size(361, 22)
         Me.UnitsToCreateTextEdit.StyleController = Me.LayoutControl1
         Me.UnitsToCreateTextEdit.TabIndex = 7
         '
         'CreatedUnitsTextEdit
         '
-        Me.CreatedUnitsTextEdit.Location = New System.Drawing.Point(185, 81)
+        Me.CreatedUnitsTextEdit.Location = New System.Drawing.Point(261, 81)
         Me.CreatedUnitsTextEdit.Name = "CreatedUnitsTextEdit"
         Me.CreatedUnitsTextEdit.Properties.ReadOnly = True
-        Me.CreatedUnitsTextEdit.Size = New System.Drawing.Size(1040, 22)
+        Me.CreatedUnitsTextEdit.Size = New System.Drawing.Size(964, 22)
         Me.CreatedUnitsTextEdit.StyleController = Me.LayoutControl1
         Me.CreatedUnitsTextEdit.TabIndex = 6
         Me.CreatedUnitsTextEdit.TabStop = False
         '
         'UnitsTotalTextEdit
         '
-        Me.UnitsTotalTextEdit.Location = New System.Drawing.Point(787, 55)
+        Me.UnitsTotalTextEdit.Location = New System.Drawing.Point(863, 55)
         Me.UnitsTotalTextEdit.Name = "UnitsTotalTextEdit"
         Me.UnitsTotalTextEdit.Properties.ReadOnly = True
-        Me.UnitsTotalTextEdit.Size = New System.Drawing.Size(438, 22)
+        Me.UnitsTotalTextEdit.Size = New System.Drawing.Size(362, 22)
         Me.UnitsTotalTextEdit.StyleController = Me.LayoutControl1
         Me.UnitsTotalTextEdit.TabIndex = 5
         Me.UnitsTotalTextEdit.TabStop = False
         '
         'ProjectsLookUpEdit
         '
-        Me.ProjectsLookUpEdit.Location = New System.Drawing.Point(185, 55)
+        Me.ProjectsLookUpEdit.Location = New System.Drawing.Point(261, 55)
         Me.ProjectsLookUpEdit.Name = "ProjectsLookUpEdit"
         Me.ProjectsLookUpEdit.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
         Me.ProjectsLookUpEdit.Properties.Columns.AddRange(New DevExpress.XtraEditors.Controls.LookUpColumnInfo() {New DevExpress.XtraEditors.Controls.LookUpColumnInfo("ID", "Name1", 20, DevExpress.Utils.FormatType.None, "", False, DevExpress.Utils.HorzAlignment.[Default], DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.[Default]), New DevExpress.XtraEditors.Controls.LookUpColumnInfo("ProjectName", "Project")})
         Me.ProjectsLookUpEdit.Properties.NullText = ""
         Me.ProjectsLookUpEdit.Properties.NullValuePrompt = "Select Project..."
-        Me.ProjectsLookUpEdit.Size = New System.Drawing.Size(437, 22)
+        Me.ProjectsLookUpEdit.Size = New System.Drawing.Size(361, 22)
         Me.ProjectsLookUpEdit.StyleController = Me.LayoutControl1
         Me.ProjectsLookUpEdit.TabIndex = 4
         '
@@ -382,7 +382,7 @@ Partial Class UCUnits
         Me.LayoutControlItem14.Name = "LayoutControlItem14"
         Me.LayoutControlItem14.Size = New System.Drawing.Size(1205, 26)
         Me.LayoutControlItem14.Text = "Unit Buying Price:"
-        Me.LayoutControlItem14.TextSize = New System.Drawing.Size(158, 16)
+        Me.LayoutControlItem14.TextSize = New System.Drawing.Size(234, 16)
         '
         'LayoutControlItem12
         '
@@ -391,7 +391,7 @@ Partial Class UCUnits
         Me.LayoutControlItem12.Name = "LayoutControlItem12"
         Me.LayoutControlItem12.Size = New System.Drawing.Size(602, 26)
         Me.LayoutControlItem12.Text = "Commission Criteria:"
-        Me.LayoutControlItem12.TextSize = New System.Drawing.Size(158, 16)
+        Me.LayoutControlItem12.TextSize = New System.Drawing.Size(234, 16)
         '
         'LayoutControlItem13
         '
@@ -400,7 +400,7 @@ Partial Class UCUnits
         Me.LayoutControlItem13.Name = "LayoutControlItem13"
         Me.LayoutControlItem13.Size = New System.Drawing.Size(603, 26)
         Me.LayoutControlItem13.Text = "Enter Amount:"
-        Me.LayoutControlItem13.TextSize = New System.Drawing.Size(158, 16)
+        Me.LayoutControlItem13.TextSize = New System.Drawing.Size(234, 16)
         '
         'LayoutControlItem11
         '
@@ -409,16 +409,16 @@ Partial Class UCUnits
         Me.LayoutControlItem11.Name = "LayoutControlItem11"
         Me.LayoutControlItem11.Size = New System.Drawing.Size(603, 26)
         Me.LayoutControlItem11.Text = "Land Size:"
-        Me.LayoutControlItem11.TextSize = New System.Drawing.Size(158, 16)
+        Me.LayoutControlItem11.TextSize = New System.Drawing.Size(234, 16)
         '
         'LayoutControlItem9
         '
-        Me.LayoutControlItem9.Control = Me.SellingPrice12MonthPlanTextEdit
+        Me.LayoutControlItem9.Control = Me.SellingPriceNonMember12MonthPlanTextEdit
         Me.LayoutControlItem9.Location = New System.Drawing.Point(602, 104)
         Me.LayoutControlItem9.Name = "LayoutControlItem9"
         Me.LayoutControlItem9.Size = New System.Drawing.Size(603, 26)
-        Me.LayoutControlItem9.Text = "Selling Price(12Month Plan)"
-        Me.LayoutControlItem9.TextSize = New System.Drawing.Size(158, 16)
+        Me.LayoutControlItem9.Text = "Selling Price(Non Member 12Month Plan)"
+        Me.LayoutControlItem9.TextSize = New System.Drawing.Size(234, 16)
         '
         'LayoutControlItem7
         '
@@ -427,7 +427,7 @@ Partial Class UCUnits
         Me.LayoutControlItem7.Name = "LayoutControlItem7"
         Me.LayoutControlItem7.Size = New System.Drawing.Size(603, 26)
         Me.LayoutControlItem7.Text = "Selling Price(Non Member):"
-        Me.LayoutControlItem7.TextSize = New System.Drawing.Size(158, 16)
+        Me.LayoutControlItem7.TextSize = New System.Drawing.Size(234, 16)
         '
         'LayoutControlItem5
         '
@@ -436,7 +436,7 @@ Partial Class UCUnits
         Me.LayoutControlItem5.Name = "LayoutControlItem5"
         Me.LayoutControlItem5.Size = New System.Drawing.Size(603, 26)
         Me.LayoutControlItem5.Text = "Remaining Units:"
-        Me.LayoutControlItem5.TextSize = New System.Drawing.Size(158, 16)
+        Me.LayoutControlItem5.TextSize = New System.Drawing.Size(234, 16)
         '
         'LayoutControlItem2
         '
@@ -445,7 +445,7 @@ Partial Class UCUnits
         Me.LayoutControlItem2.Name = "LayoutControlItem2"
         Me.LayoutControlItem2.Size = New System.Drawing.Size(603, 26)
         Me.LayoutControlItem2.Text = "No Of Units:"
-        Me.LayoutControlItem2.TextSize = New System.Drawing.Size(158, 16)
+        Me.LayoutControlItem2.TextSize = New System.Drawing.Size(234, 16)
         '
         'LayoutControlItem1
         '
@@ -454,7 +454,7 @@ Partial Class UCUnits
         Me.LayoutControlItem1.Name = "LayoutControlItem1"
         Me.LayoutControlItem1.Size = New System.Drawing.Size(602, 26)
         Me.LayoutControlItem1.Text = "Project:"
-        Me.LayoutControlItem1.TextSize = New System.Drawing.Size(158, 16)
+        Me.LayoutControlItem1.TextSize = New System.Drawing.Size(234, 16)
         '
         'LayoutControlItem3
         '
@@ -463,7 +463,7 @@ Partial Class UCUnits
         Me.LayoutControlItem3.Name = "LayoutControlItem3"
         Me.LayoutControlItem3.Size = New System.Drawing.Size(1205, 26)
         Me.LayoutControlItem3.Text = "Created Units:"
-        Me.LayoutControlItem3.TextSize = New System.Drawing.Size(158, 16)
+        Me.LayoutControlItem3.TextSize = New System.Drawing.Size(234, 16)
         '
         'LayoutControlItem4
         '
@@ -472,7 +472,7 @@ Partial Class UCUnits
         Me.LayoutControlItem4.Name = "LayoutControlItem4"
         Me.LayoutControlItem4.Size = New System.Drawing.Size(602, 26)
         Me.LayoutControlItem4.Text = "Units To Create:"
-        Me.LayoutControlItem4.TextSize = New System.Drawing.Size(158, 16)
+        Me.LayoutControlItem4.TextSize = New System.Drawing.Size(234, 16)
         '
         'LayoutControlItem6
         '
@@ -481,16 +481,16 @@ Partial Class UCUnits
         Me.LayoutControlItem6.Name = "LayoutControlItem6"
         Me.LayoutControlItem6.Size = New System.Drawing.Size(602, 26)
         Me.LayoutControlItem6.Text = "Selling Price(Member):"
-        Me.LayoutControlItem6.TextSize = New System.Drawing.Size(158, 16)
+        Me.LayoutControlItem6.TextSize = New System.Drawing.Size(234, 16)
         '
         'LayoutControlItem8
         '
-        Me.LayoutControlItem8.Control = Me.SellingPrice6monthPlanTextEdit
+        Me.LayoutControlItem8.Control = Me.SellingPriceMember12monthPlanTextEdit
         Me.LayoutControlItem8.Location = New System.Drawing.Point(0, 104)
         Me.LayoutControlItem8.Name = "LayoutControlItem8"
         Me.LayoutControlItem8.Size = New System.Drawing.Size(602, 26)
-        Me.LayoutControlItem8.Text = "Selling Price(6Month Plan)"
-        Me.LayoutControlItem8.TextSize = New System.Drawing.Size(158, 16)
+        Me.LayoutControlItem8.Text = "Selling Price(Member 12 Month Plan)"
+        Me.LayoutControlItem8.TextSize = New System.Drawing.Size(234, 16)
         '
         'LayoutControlItem10
         '
@@ -499,7 +499,7 @@ Partial Class UCUnits
         Me.LayoutControlItem10.Name = "LayoutControlItem10"
         Me.LayoutControlItem10.Size = New System.Drawing.Size(602, 26)
         Me.LayoutControlItem10.Text = "Title Fee:"
-        Me.LayoutControlItem10.TextSize = New System.Drawing.Size(158, 16)
+        Me.LayoutControlItem10.TextSize = New System.Drawing.Size(234, 16)
         '
         'UnitNo
         '
@@ -544,7 +544,7 @@ Partial Class UCUnits
         'MonthPlan6
         '
         Me.MonthPlan6.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.MonthPlan6.HeaderText = "6 Month Plan"
+        Me.MonthPlan6.HeaderText = "12 Month Plan - Member"
         Me.MonthPlan6.MinimumWidth = 6
         Me.MonthPlan6.Name = "MonthPlan6"
         Me.MonthPlan6.ReadOnly = True
@@ -552,7 +552,7 @@ Partial Class UCUnits
         'MonthPlan12
         '
         Me.MonthPlan12.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.MonthPlan12.HeaderText = "12 Month Plan"
+        Me.MonthPlan12.HeaderText = "12 Month Plan - Non-Member"
         Me.MonthPlan12.MinimumWidth = 6
         Me.MonthPlan12.Name = "MonthPlan12"
         Me.MonthPlan12.ReadOnly = True
@@ -584,8 +584,8 @@ Partial Class UCUnits
         CType(Me.CommissionCriteriaComboBoxEdit.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LandSizeTextEdit.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TitleFeeTextEdit.Properties, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.SellingPrice12MonthPlanTextEdit.Properties, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.SellingPrice6monthPlanTextEdit.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.SellingPriceNonMember12MonthPlanTextEdit.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.SellingPriceMember12monthPlanTextEdit.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.NoneMemberSellingPriceTextEdit.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.MemberSellingPriceTextEdit.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RemainingUnitsTextEdit.Properties, System.ComponentModel.ISupportInitialize).EndInit()
@@ -627,8 +627,8 @@ Partial Class UCUnits
     Friend WithEvents CommissionCriteriaComboBoxEdit As DevExpress.XtraEditors.ComboBoxEdit
     Friend WithEvents LandSizeTextEdit As DevExpress.XtraEditors.TextEdit
     Friend WithEvents TitleFeeTextEdit As DevExpress.XtraEditors.TextEdit
-    Friend WithEvents SellingPrice12MonthPlanTextEdit As DevExpress.XtraEditors.TextEdit
-    Friend WithEvents SellingPrice6monthPlanTextEdit As DevExpress.XtraEditors.TextEdit
+    Friend WithEvents SellingPriceNonMember12MonthPlanTextEdit As DevExpress.XtraEditors.TextEdit
+    Friend WithEvents SellingPriceMember12monthPlanTextEdit As DevExpress.XtraEditors.TextEdit
     Friend WithEvents NoneMemberSellingPriceTextEdit As DevExpress.XtraEditors.TextEdit
     Friend WithEvents MemberSellingPriceTextEdit As DevExpress.XtraEditors.TextEdit
     Friend WithEvents RemainingUnitsTextEdit As DevExpress.XtraEditors.TextEdit

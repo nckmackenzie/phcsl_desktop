@@ -95,7 +95,7 @@ Public Class UCUnits
                 Try
 
                     For i = 0 To DataGridView.Rows.Count - 1
-                        sql = "INSERT INTO tblUnits (ID,projectId,unitName,unitBuyingPrice,unitSellingPriceMember,unitSellingPriceNonMember,titlePrice,landSize,commisionType,commission,sellingPriceSixPlan,sellingPriceTwelvePlan) "
+                        sql = "INSERT INTO tblUnits (ID,projectId,unitName,unitBuyingPrice,unitSellingPriceMember,unitSellingPriceNonMember,titlePrice,landSize,commisionType,commission,sellingPriceMemberTwelvePlan,sellingPriceNonMemberTwelvePlan) "
                         sql &= "VALUES(@id,@project,@name,@bp,@member,@nonmember,@title,@size,@commtype,@comm,@six,@twelve)"
                         Using cmd As New SqlCommand(sql, Connection, MyTransaction)
                             With cmd
@@ -173,7 +173,7 @@ Public Class UCUnits
             UnitBuyingPriceTextEdit.EditValue = CDec(Searchdt.Rows(0)(2))
         End If
         dt = New DataTable
-        sql = "SELECT unitName,coalesce(titlePrice,0),unitSellingPriceMember,unitSellingPriceNonMember,landSize,coalesce(sellingPriceSixPlan,0),coalesce(sellingPriceTwelvePlan,0),ID "
+        sql = "SELECT unitName,coalesce(titlePrice,0),unitSellingPriceMember,unitSellingPriceNonMember,landSize,coalesce(sellingPriceMemberTwelvePlan,0),coalesce(sellingPriceNonMemberTwelvePlan,0),ID "
         sql &= "FROM tblUnits WHERE projectId=@pid AND (sold = 0)"
         AddParams("@pid", CInt(ProjectsLookUpEdit.EditValue))
         dt = AppClass.LoadToDatatable(sql)
@@ -199,7 +199,7 @@ Public Class UCUnits
 
                     For i = 0 To DataGridView.Rows.Count - 1
                         sql = "UPDATE tblUnits SET unitName=@name,unitBuyingPrice=@bp,unitSellingPriceMember=@member,unitSellingPriceNonMember=@nonmember, "
-                        sql &= "titlePrice=@title,landSize=@size,commisionType=@commtype,commission=@comm,sellingPriceSixPlan=@six,sellingPriceTwelvePlan=@twelve "
+                        sql &= "titlePrice=@title,landSize=@size,commisionType=@commtype,commission=@comm,sellingPriceMemberTwelvePlan=@six,sellingPriceNonMemberTwelvePlan=@twelve "
                         sql &= "WHERE ID=@id"
                         Using cmd As New SqlCommand(sql, Connection, MyTransaction)
                             With cmd
@@ -331,14 +331,14 @@ Public Class UCUnits
             FillGridWithValues(3, CDec(NoneMemberSellingPriceTextEdit.EditValue).ToString("N"))
         End If
     End Sub
-    Private Sub SellingPrice6monthPlanTextEdit_EditValueChanged(sender As Object, e As EventArgs) Handles SellingPrice6monthPlanTextEdit.Leave
-        If SellingPrice6monthPlanTextEdit.EditValue IsNot Nothing AndAlso DataGridView.Rows.Count > 0 Then
-            FillGridWithValues(5, CDec(SellingPrice6monthPlanTextEdit.EditValue).ToString("N"))
+    Private Sub SellingPrice6monthPlanTextEdit_EditValueChanged(sender As Object, e As EventArgs) Handles SellingPriceMember12monthPlanTextEdit.Leave
+        If SellingPriceMember12monthPlanTextEdit.EditValue IsNot Nothing AndAlso DataGridView.Rows.Count > 0 Then
+            FillGridWithValues(5, CDec(SellingPriceMember12monthPlanTextEdit.EditValue).ToString("N"))
         End If
     End Sub
-    Private Sub SellingPrice12MonthPlanTextEdit_EditValueChanged(sender As Object, e As EventArgs) Handles SellingPrice12MonthPlanTextEdit.Leave
-        If SellingPrice12MonthPlanTextEdit.EditValue IsNot Nothing AndAlso DataGridView.Rows.Count > 0 Then
-            FillGridWithValues(6, CDec(SellingPrice12MonthPlanTextEdit.EditValue).ToString("N"))
+    Private Sub SellingPrice12MonthPlanTextEdit_EditValueChanged(sender As Object, e As EventArgs) Handles SellingPriceNonMember12MonthPlanTextEdit.Leave
+        If SellingPriceNonMember12MonthPlanTextEdit.EditValue IsNot Nothing AndAlso DataGridView.Rows.Count > 0 Then
+            FillGridWithValues(6, CDec(SellingPriceNonMember12MonthPlanTextEdit.EditValue).ToString("N"))
         End If
     End Sub
     Private Sub TitleFeeTextEdit_EditValueChanged(sender As Object, e As EventArgs) Handles TitleFeeTextEdit.Leave
