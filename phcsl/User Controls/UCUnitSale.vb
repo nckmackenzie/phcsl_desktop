@@ -918,10 +918,10 @@ Public Class UCUnitSale
         '    .EditValue = Nothing
         '    .Properties.ReadOnly = MemberNonMemberComboBoxEdit.SelectedIndex = 1
         'End With
-        'With DeductionTypeComboBoxEdit
-        '    .SelectedIndex = 3
-        '    .Properties.ReadOnly = MemberNonMemberComboBoxEdit.SelectedIndex = 1
-        'End With
+        With DeductionTypeComboBoxEdit
+            .SelectedIndex = 3
+            .Properties.ReadOnly = MemberNonMemberComboBoxEdit.SelectedIndex = 1
+        End With
         GetUnitPrice()
     End Sub
     Private Sub ProjectLookUpEdit_EditValueChanged(sender As Object, e As EventArgs) Handles ProjectLookUpEdit.EditValueChanged
