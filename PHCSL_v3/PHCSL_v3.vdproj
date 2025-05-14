@@ -171,6 +171,12 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_27A799527F424C798F16CBABF75B2795"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_28D7E0745061A128020C3BAE82A0CAB9"
         "OwnerKey" = "8:_61D4EC4A7C6B48CDA3A16F02F1EFED6F"
         "MsmSig" = "8:_UNDEFINED"
@@ -1485,20 +1491,8 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_D46E48DAB8AD457CA3E9E019503C55EC"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
         "MsmKey" = "8:_D4EC38BD70A0E7F1DF427DD50F29A2EE"
         "OwnerKey" = "8:_61D4EC4A7C6B48CDA3A16F02F1EFED6F"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_D70D8ABFA7AB46AAAC62C58F6349149F"
-        "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -3348,6 +3342,26 @@
             "Register" = "3:1"
             "Exclude" = "11:FALSE"
             "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_27A799527F424C798F16CBABF75B2795"
+            {
+            "SourcePath" = "8:..\\phcsl\\icons8-property-16.ico"
+            "TargetName" = "8:icons8-property-16.ico"
+            "Tag" = "8:"
+            "Folder" = "8:_E3FFA9B95E9D400BACFFE8F4E2005FD2"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:TRUE"
+            "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_28D7E0745061A128020C3BAE82A0CAB9"
@@ -6873,26 +6887,6 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_D46E48DAB8AD457CA3E9E019503C55EC"
-            {
-            "SourcePath" = "8:..\\..\\..\\icons8-property-16.ico"
-            "TargetName" = "8:icons8-property-16.ico"
-            "Tag" = "8:"
-            "Folder" = "8:_E3FFA9B95E9D400BACFFE8F4E2005FD2"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:TRUE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_D4EC38BD70A0E7F1DF427DD50F29A2EE"
             {
             "AssemblyRegister" = "3:1"
@@ -6922,26 +6916,6 @@
             "Register" = "3:1"
             "Exclude" = "11:FALSE"
             "IsDependency" = "11:TRUE"
-            "IsolateTo" = "8:"
-            }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_D70D8ABFA7AB46AAAC62C58F6349149F"
-            {
-            "SourcePath" = "8:..\\..\\..\\icons8-property-16.ico"
-            "TargetName" = "8:icons8-property-16.ico"
-            "Tag" = "8:"
-            "Folder" = "8:_8E61798F92B14CAA9878810AC802B987"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_D8DA41ACCED3ED4936AF8B6706BA1FFD"
@@ -7669,7 +7643,7 @@
         "Keywords" = "8:"
         "ARPCOMMENTS" = "8:"
         "ARPURLINFOABOUT" = "8:"
-        "ARPPRODUCTICON" = "8:_D46E48DAB8AD457CA3E9E019503C55EC"
+        "ARPPRODUCTICON" = "8:_27A799527F424C798F16CBABF75B2795"
         "ARPIconIndex" = "3:0"
         "SearchPath" = "8:"
         "UseSystemSearchPath" = "11:TRUE"
@@ -7783,7 +7757,7 @@
             "Target" = "8:_61D4EC4A7C6B48CDA3A16F02F1EFED6F"
             "Folder" = "8:_E3FFA9B95E9D400BACFFE8F4E2005FD2"
             "WorkingFolder" = "8:_8E61798F92B14CAA9878810AC802B987"
-            "Icon" = "8:_D46E48DAB8AD457CA3E9E019503C55EC"
+            "Icon" = "8:_27A799527F424C798F16CBABF75B2795"
             "Feature" = "8:"
             }
         }
