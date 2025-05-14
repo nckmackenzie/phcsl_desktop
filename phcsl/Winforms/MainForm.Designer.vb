@@ -48,6 +48,7 @@ Partial Class MainForm
         Me.aceFinance = New DevExpress.XtraBars.Navigation.AccordionControlElement()
         Me.AceMemberContributions = New DevExpress.XtraBars.Navigation.AccordionControlElement()
         Me.AceDividentPayments = New DevExpress.XtraBars.Navigation.AccordionControlElement()
+        Me.AceInterestOnDeposit = New DevExpress.XtraBars.Navigation.AccordionControlElement()
         Me.AceExpenses = New DevExpress.XtraBars.Navigation.AccordionControlElement()
         Me.AceImportExpenses = New DevExpress.XtraBars.Navigation.AccordionControlElement()
         Me.aceReports = New DevExpress.XtraBars.Navigation.AccordionControlElement()
@@ -56,7 +57,7 @@ Partial Class MainForm
         Me.TopBarItem = New DevExpress.XtraBars.BarStaticItem()
         Me.FluentFormDefaultManager1 = New DevExpress.XtraBars.FluentDesignSystem.FluentFormDefaultManager(Me.components)
         Me.AccordionControlElement1 = New DevExpress.XtraBars.Navigation.AccordionControlElement()
-        Me.AceInterestOnDeposit = New DevExpress.XtraBars.Navigation.AccordionControlElement()
+        Me.AceNonMemberUnitPayment = New DevExpress.XtraBars.Navigation.AccordionControlElement()
         CType(Me.AccordionControl1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.FluentDesignFormControl1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.FluentFormDefaultManager1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -297,7 +298,7 @@ Partial Class MainForm
         '
         'aceFinance
         '
-        Me.aceFinance.Elements.AddRange(New DevExpress.XtraBars.Navigation.AccordionControlElement() {Me.AceMemberContributions, Me.AceDividentPayments, Me.AceInterestOnDeposit, Me.AceExpenses, Me.AceImportExpenses})
+        Me.aceFinance.Elements.AddRange(New DevExpress.XtraBars.Navigation.AccordionControlElement() {Me.AceMemberContributions, Me.AceNonMemberUnitPayment, Me.AceDividentPayments, Me.AceInterestOnDeposit, Me.AceExpenses, Me.AceImportExpenses})
         Me.aceFinance.Expanded = True
         Me.aceFinance.Name = "aceFinance"
         Me.aceFinance.Text = "Finance"
@@ -331,6 +332,13 @@ Partial Class MainForm
         Me.AceDividentPayments.Name = "AceDividentPayments"
         Me.AceDividentPayments.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item
         Me.AceDividentPayments.Text = "Dividends Payments"
+        '
+        'AceInterestOnDeposit
+        '
+        Me.AceInterestOnDeposit.ImageOptions.Image = Global.phcsl.My.Resources.Resources.icons8_interest_16
+        Me.AceInterestOnDeposit.Name = "AceInterestOnDeposit"
+        Me.AceInterestOnDeposit.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item
+        Me.AceInterestOnDeposit.Text = "Interest On Deposit(Bonus)"
         '
         'AceExpenses
         '
@@ -381,7 +389,6 @@ Partial Class MainForm
         '
         'FluentFormDefaultManager1
         '
-        Me.FluentFormDefaultManager1.DockingEnabled = False
         Me.FluentFormDefaultManager1.Form = Me
         Me.FluentFormDefaultManager1.Items.AddRange(New DevExpress.XtraBars.BarItem() {Me.TopBarItem})
         Me.FluentFormDefaultManager1.MaxItemId = 1
@@ -392,12 +399,12 @@ Partial Class MainForm
         Me.AccordionControlElement1.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item
         Me.AccordionControlElement1.Text = "Element1"
         '
-        'AceInterestOnDeposit
+        'AceNonMemberUnitPayment
         '
-        Me.AceInterestOnDeposit.ImageOptions.Image = Global.phcsl.My.Resources.Resources.icons8_interest_16
-        Me.AceInterestOnDeposit.Name = "AceInterestOnDeposit"
-        Me.AceInterestOnDeposit.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item
-        Me.AceInterestOnDeposit.Text = "Interest On Deposit(Bonus)"
+        Me.AceNonMemberUnitPayment.ImageOptions.Image = Global.phcsl.My.Resources.Resources.icons8_remove_user_female_16
+        Me.AceNonMemberUnitPayment.Name = "AceNonMemberUnitPayment"
+        Me.AceNonMemberUnitPayment.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item
+        Me.AceNonMemberUnitPayment.Text = "Non Member Unit Payment"
         '
         'MainForm
         '
@@ -454,4 +461,5 @@ Partial Class MainForm
     Friend WithEvents AceExpenses As DevExpress.XtraBars.Navigation.AccordionControlElement
     Friend WithEvents AceUnitReservation As DevExpress.XtraBars.Navigation.AccordionControlElement
     Friend WithEvents AceInterestOnDeposit As DevExpress.XtraBars.Navigation.AccordionControlElement
+    Friend WithEvents AceNonMemberUnitPayment As DevExpress.XtraBars.Navigation.AccordionControlElement
 End Class

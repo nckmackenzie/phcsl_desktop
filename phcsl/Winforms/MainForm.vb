@@ -124,4 +124,7 @@ Public Class MainForm
     Private Sub AceInterestOnDeposit_Click(sender As Object, e As EventArgs) Handles AceInterestOnDeposit.Click
         AddUserControlToContainer(UCInterestOnDeposit.Instance, AceInterestOnDeposit)
     End Sub
+    Private Sub AceNonMemberUnitPayment_Click(sender As Object, e As EventArgs) Handles AceNonMemberUnitPayment.Click
+        AddUserControlToContainer(UCNonMemberPayment.Instance, AceNonMemberUnitPayment)
+    End Sub
 End Class
